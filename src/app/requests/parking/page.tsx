@@ -225,9 +225,6 @@ export default function ParkingRequestsPage() {
                       className="rounded-lg object-cover cursor-pointer border border-slate-200 hover:border-emerald-500 transition-colors"
                       preview={{
                         mask: <EyeOutlined className="text-xs" />,
-                        classNames: {
-                          mask: "rounded-lg"
-                        }
                       }}
                     />
                   )}
