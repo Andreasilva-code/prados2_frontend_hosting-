@@ -139,7 +139,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
               selectedKeys={[pathname]}
               defaultOpenKeys={['/requests']}
               items={(() => {
-                const mapMenuItems = (items: any[]) => items.map(item => ({
+                const mapMenuItems = (items: any[]): any[] => items.map(item => ({
                   ...item,
                   label: item.children ? (
                     <span className="font-medium">{item.label}</span>
