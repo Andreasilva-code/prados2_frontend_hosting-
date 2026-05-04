@@ -196,9 +196,9 @@ export default function ParkingRequestsPage() {
       key: 'documentos',
       render: (_: any, record: SolicitudParqueadero) => {
         const docs = [
-          { key: 'soat', label: 'SOAT', file: record.soat, url: record.soatUrl },
-          { key: 'tecno', label: 'Tecno', file: record.tecnoMecanica, url: record.tecnoMecanicaUrl },
-          { key: 'tarjeta', label: 'Tarjeta', file: record.tarjetaPropiedad, url: record.tarjetaPropiedadUrl },
+          { key: 'soat', label: 'SOAT', file: record.soat, url: record.soat ? `${API_ROUTES.UPLOAD_DIR}${record.soat}` : null },
+          { key: 'tecno', label: 'Tecno', file: record.tecnoMecanica, url: record.tecnoMecanica ? `${API_ROUTES.UPLOAD_DIR}${record.tecnoMecanica}` : null },
+          { key: 'tarjeta', label: 'Tarjeta', file: record.tarjetaPropiedad, url: record.tarjetaPropiedad ? `${API_ROUTES.UPLOAD_DIR}${record.tarjetaPropiedad}` : null },
         ];
 
         return (
